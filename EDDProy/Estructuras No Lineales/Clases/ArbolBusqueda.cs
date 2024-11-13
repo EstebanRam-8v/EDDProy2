@@ -344,6 +344,67 @@ namespace EDDemo.Estructuras_No_Lineales
         }
 
 
+        public NodoBinario EliminarNodoSucesor(NodoBinario nodo, int valor)
+        {
+            if (nodo == null)
+            {
+                return nodo; // El nodo no está en el árbol
+            }
+
+            // Si el valor es menor, recorre el subárbol izquierdo
+            if (valor < nodo.Dato)
+            {
+                nodo.Izq = EliminarNodoSucesor(nodo.Izq, valor);
+            }
+            // Si el valor es mayor, recorre el subárbol derecho
+            else if (valor > nodo.Dato)
+            {
+                nodo.Der = EliminarNodoSucesor(nodo.Der, valor);
+            }
+            else
+            {
+                // Caso 1: El nodo no tiene hijos
+                if (nodo.Izq == null && nodo.Der == null)
+                {
+                    return null;
+                }
+                // Caso 2: El nodo tiene solo un hijo
+                else if (nodo.Izq == null)
+                {
+                    return nodo.Der;
+                }
+                else if (nodo.Der == null)
+                {
+                    return nodo.Izq;
+                }
+                // Caso 3: El nodo tiene dos hijos
+                else
+                {
+                    // Encuentra el sucesor (mínimo en el subárbol derecho)
+                    NodoBinario sucesor = EncontrarMinimo(nodo.Der);
+                    nodo.Dato = sucesor.Dato;
+
+                    // Elimina el sucesor en el subárbol derecho
+                    nodo.Der = EliminarNodoSucesor(nodo.Der, sucesor.Dato);
+                }
+            }
+            return nodo;
+        }
+
+        // Método auxiliar para encontrar el nodo con el valor mínimo en un subárbol
+        private NodoBinario EncontrarMinimo(NodoBinario nodo)
+        {
+            NodoBinario actual = nodo;
+
+            while (actual.Izq != null)
+            {
+                actual = actual.Izq;
+            }
+
+            return actual;
+        }
+
+
 
     }
 }

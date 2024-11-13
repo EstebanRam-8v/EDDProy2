@@ -59,13 +59,15 @@ namespace EDDemo.Estructuras_No_Lineales
             this.btnBinario = new System.Windows.Forms.Button();
             this.btnLleno = new System.Windows.Forms.Button();
             this.txtDatos = new System.Windows.Forms.TextBox();
-            this.txtArbolpo = new System.Windows.Forms.TextBox();
             this.lblAmplitud = new System.Windows.Forms.Label();
             this.lblAltura = new System.Windows.Forms.Label();
             this.lblCant = new System.Windows.Forms.Label();
             this.lblnodos = new System.Windows.Forms.Label();
             this.lblBinario1 = new System.Windows.Forms.Label();
             this.lblLleno = new System.Windows.Forms.Label();
+            this.btnSucesor = new System.Windows.Forms.Button();
+            this.txtSucesor = new System.Windows.Forms.TextBox();
+            this.txtArbolpo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.txtNodos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -313,7 +315,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             this.BtnPodar.Location = new System.Drawing.Point(181, 16);
             this.BtnPodar.Name = "BtnPodar";
-            this.BtnPodar.Size = new System.Drawing.Size(75, 23);
+            this.BtnPodar.Size = new System.Drawing.Size(75, 39);
             this.BtnPodar.TabIndex = 22;
             this.BtnPodar.Text = "Podar";
             this.BtnPodar.UseVisualStyleBackColor = true;
@@ -323,15 +325,15 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             this.btnPredecesor.Location = new System.Drawing.Point(274, 16);
             this.btnPredecesor.Name = "btnPredecesor";
-            this.btnPredecesor.Size = new System.Drawing.Size(75, 23);
+            this.btnPredecesor.Size = new System.Drawing.Size(73, 39);
             this.btnPredecesor.TabIndex = 23;
-            this.btnPredecesor.Text = "Nodo";
+            this.btnPredecesor.Text = "Nodo Precesor";
             this.btnPredecesor.UseVisualStyleBackColor = true;
             this.btnPredecesor.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAltitud
             // 
-            this.btnAltitud.Location = new System.Drawing.Point(371, 16);
+            this.btnAltitud.Location = new System.Drawing.Point(441, 17);
             this.btnAltitud.Name = "btnAltitud";
             this.btnAltitud.Size = new System.Drawing.Size(75, 23);
             this.btnAltitud.TabIndex = 24;
@@ -341,7 +343,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // btnAltura
             // 
-            this.btnAltura.Location = new System.Drawing.Point(371, 68);
+            this.btnAltura.Location = new System.Drawing.Point(441, 68);
             this.btnAltura.Name = "btnAltura";
             this.btnAltura.Size = new System.Drawing.Size(75, 23);
             this.btnAltura.TabIndex = 25;
@@ -351,7 +353,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // btnHojas
             // 
-            this.btnHojas.Location = new System.Drawing.Point(558, 17);
+            this.btnHojas.Location = new System.Drawing.Point(621, 16);
             this.btnHojas.Name = "btnHojas";
             this.btnHojas.Size = new System.Drawing.Size(75, 23);
             this.btnHojas.TabIndex = 26;
@@ -361,7 +363,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // btncantidad
             // 
-            this.btncantidad.Location = new System.Drawing.Point(558, 68);
+            this.btncantidad.Location = new System.Drawing.Point(621, 68);
             this.btncantidad.Name = "btncantidad";
             this.btncantidad.Size = new System.Drawing.Size(75, 23);
             this.btncantidad.TabIndex = 27;
@@ -371,7 +373,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // btnBinario
             // 
-            this.btnBinario.Location = new System.Drawing.Point(785, 70);
+            this.btnBinario.Location = new System.Drawing.Point(916, 68);
             this.btnBinario.Name = "btnBinario";
             this.btnBinario.Size = new System.Drawing.Size(64, 23);
             this.btnBinario.TabIndex = 28;
@@ -381,7 +383,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // btnLleno
             // 
-            this.btnLleno.Location = new System.Drawing.Point(785, 21);
+            this.btnLleno.Location = new System.Drawing.Point(916, 17);
             this.btnLleno.Name = "btnLleno";
             this.btnLleno.Size = new System.Drawing.Size(64, 23);
             this.btnLleno.TabIndex = 29;
@@ -391,22 +393,15 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // txtDatos
             // 
-            this.txtDatos.Location = new System.Drawing.Point(274, 45);
+            this.txtDatos.Location = new System.Drawing.Point(274, 62);
             this.txtDatos.Name = "txtDatos";
             this.txtDatos.Size = new System.Drawing.Size(60, 20);
             this.txtDatos.TabIndex = 31;
             // 
-            // txtArbolpo
-            // 
-            this.txtArbolpo.Location = new System.Drawing.Point(181, 45);
-            this.txtArbolpo.Name = "txtArbolpo";
-            this.txtArbolpo.Size = new System.Drawing.Size(60, 20);
-            this.txtArbolpo.TabIndex = 30;
-            // 
             // lblAmplitud
             // 
             this.lblAmplitud.AutoSize = true;
-            this.lblAmplitud.Location = new System.Drawing.Point(377, 42);
+            this.lblAmplitud.Location = new System.Drawing.Point(438, 48);
             this.lblAmplitud.Name = "lblAmplitud";
             this.lblAmplitud.Size = new System.Drawing.Size(47, 13);
             this.lblAmplitud.TabIndex = 32;
@@ -415,7 +410,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // lblAltura
             // 
             this.lblAltura.AutoSize = true;
-            this.lblAltura.Location = new System.Drawing.Point(390, 94);
+            this.lblAltura.Location = new System.Drawing.Point(438, 95);
             this.lblAltura.Name = "lblAltura";
             this.lblAltura.Size = new System.Drawing.Size(34, 13);
             this.lblAltura.TabIndex = 33;
@@ -424,7 +419,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // lblCant
             // 
             this.lblCant.AutoSize = true;
-            this.lblCant.Location = new System.Drawing.Point(569, 48);
+            this.lblCant.Location = new System.Drawing.Point(639, 48);
             this.lblCant.Name = "lblCant";
             this.lblCant.Size = new System.Drawing.Size(34, 13);
             this.lblCant.TabIndex = 34;
@@ -433,7 +428,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // lblnodos
             // 
             this.lblnodos.AutoSize = true;
-            this.lblnodos.Location = new System.Drawing.Point(569, 95);
+            this.lblnodos.Location = new System.Drawing.Point(639, 95);
             this.lblnodos.Name = "lblnodos";
             this.lblnodos.Size = new System.Drawing.Size(49, 13);
             this.lblnodos.TabIndex = 35;
@@ -442,7 +437,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // lblBinario1
             // 
             this.lblBinario1.AutoSize = true;
-            this.lblBinario1.Location = new System.Drawing.Point(782, 100);
+            this.lblBinario1.Location = new System.Drawing.Point(913, 95);
             this.lblBinario1.Name = "lblBinario1";
             this.lblBinario1.Size = new System.Drawing.Size(58, 13);
             this.lblBinario1.TabIndex = 36;
@@ -451,17 +446,44 @@ namespace EDDemo.Estructuras_No_Lineales
             // lblLleno
             // 
             this.lblLleno.AutoSize = true;
-            this.lblLleno.Location = new System.Drawing.Point(782, 48);
+            this.lblLleno.Location = new System.Drawing.Point(913, 48);
             this.lblLleno.Name = "lblLleno";
             this.lblLleno.Size = new System.Drawing.Size(58, 13);
             this.lblLleno.TabIndex = 37;
             this.lblLleno.Text = "Respuesta";
+            // 
+            // btnSucesor
+            // 
+            this.btnSucesor.Location = new System.Drawing.Point(359, 16);
+            this.btnSucesor.Name = "btnSucesor";
+            this.btnSucesor.Size = new System.Drawing.Size(73, 39);
+            this.btnSucesor.TabIndex = 38;
+            this.btnSucesor.Text = "Nodo Sucesor";
+            this.btnSucesor.UseVisualStyleBackColor = true;
+            this.btnSucesor.Click += new System.EventHandler(this.btnSucesor_Click);
+            // 
+            // txtSucesor
+            // 
+            this.txtSucesor.Location = new System.Drawing.Point(359, 62);
+            this.txtSucesor.Name = "txtSucesor";
+            this.txtSucesor.Size = new System.Drawing.Size(60, 20);
+            this.txtSucesor.TabIndex = 32;
+            // 
+            // txtArbolpo
+            // 
+            this.txtArbolpo.Location = new System.Drawing.Point(181, 62);
+            this.txtArbolpo.Name = "txtArbolpo";
+            this.txtArbolpo.Size = new System.Drawing.Size(60, 20);
+            this.txtArbolpo.TabIndex = 32;
             // 
             // frmArboles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1256, 533);
+            this.Controls.Add(this.txtArbolpo);
+            this.Controls.Add(this.txtSucesor);
+            this.Controls.Add(this.btnSucesor);
             this.Controls.Add(this.lblLleno);
             this.Controls.Add(this.lblBinario1);
             this.Controls.Add(this.lblnodos);
@@ -469,7 +491,6 @@ namespace EDDemo.Estructuras_No_Lineales
             this.Controls.Add(this.lblAltura);
             this.Controls.Add(this.lblAmplitud);
             this.Controls.Add(this.txtDatos);
-            this.Controls.Add(this.txtArbolpo);
             this.Controls.Add(this.btnLleno);
             this.Controls.Add(this.btnBinario);
             this.Controls.Add(this.btncantidad);
@@ -536,12 +557,14 @@ namespace EDDemo.Estructuras_No_Lineales
         private System.Windows.Forms.Button btnBinario;
         private System.Windows.Forms.Button btnLleno;
         private System.Windows.Forms.TextBox txtDatos;
-        private System.Windows.Forms.TextBox txtArbolpo;
         private System.Windows.Forms.Label lblAmplitud;
         private System.Windows.Forms.Label lblAltura;
         private System.Windows.Forms.Label lblCant;
         private System.Windows.Forms.Label lblnodos;
         private System.Windows.Forms.Label lblBinario1;
         private System.Windows.Forms.Label lblLleno;
+        private System.Windows.Forms.Button btnSucesor;
+        private System.Windows.Forms.TextBox txtSucesor;
+        private System.Windows.Forms.TextBox txtArbolpo;
     }
 }

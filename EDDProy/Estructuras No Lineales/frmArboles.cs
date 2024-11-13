@@ -213,7 +213,7 @@ namespace EDDemo.Estructuras_No_Lineales
             txtArbolpo.Text = miArbol.strArbol;
 
             txtDato.Text = "";
-            MessageBox.Show($"El nodo con valor {valor} ha sido eliminado (usando predecesor inorden).");
+            MessageBox.Show($"El nodo con valor {valor} ha sido eliminado usando predecesor.");
         }
 
         private void BtnPodar_Click(object sender, EventArgs e)
@@ -345,5 +345,37 @@ namespace EDDemo.Estructuras_No_Lineales
                 lblLleno.Text = "El árbol no es binario lleno.";
             }
         }
+
+        private void btnSucesor_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+
+            if (miRaiz == null)
+            {
+                MessageBox.Show("El árbol está vacío.");
+                return;
+            }
+
+            int valor;
+            if (int.TryParse(txtSucesor.Text, out valor))
+            {
+                // Llama a EliminarNodoSucesor para eliminar el nodo con el valor especificado
+                miRaiz = miArbol.EliminarNodoSucesor(miRaiz, valor);
+
+                // Muestra el árbol actualizado en el TextBox
+                miArbol.strArbol = "";
+                miArbol.MuestraArbolAcostado(1, miRaiz);
+                txtArbolpo.Text = miArbol.strArbol;
+
+                txtSucesor.Text = "";
+
+                MessageBox.Show($"El nodo con valor {valor} ha sido eliminado usando el sucesor.", "Nodo Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Ingrese un valor válido.");
+            }
+        }
     }
 }
+
